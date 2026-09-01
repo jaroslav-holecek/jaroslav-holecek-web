@@ -14,7 +14,12 @@ const sections = [
   ['Astrologie', '/astrologie/'],
   ['Rámakrišna', '/ramakrisnovo-evangelium/'],
 ];
-
+const buddhistLinks = [
+  `${BASE}/l/dopis-priteli/`,
+  `${BASE}/l/vyklad-karmy-karmavibhanga/`,
+  `${BASE}/l/zasvecenci-a-zasvecovani-v-tibetu/`,
+  `${BASE}/l/tajna-ustni-uceni-v-tibetskych-buddhistickych-sektach/`,
+];
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const clean = s => String(s || '').replace(/\u00a0/g, ' ').replace(/[ \t]+/g, ' ').replace(/\n\s*\n+/g, '\n\n').trim();
 const slugify = s => clean(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -221,6 +226,22 @@ for (const [category, section] of sections) {
     } catch(e) { console.error('FAIL',url,e.message); failed++; }
     await sleep(120);
   }
+}
+console.log('\n== Buddhismus ==');
+for (const url of buddhistLinks) {
+  try {
+    const b = await detail(url, 'Buddhismus');
+    await fs.writeFile(
+      path.join(BOOK_DIR, `${b.slug}.json`),
+      JSON.stringify(b, null, 2) + '\n'
+    );
+    console.log('OK', b.title);
+    migrated++;
+  } catch (e) {
+    console.error('FAIL', url, e.message);
+    failed++;
+  }
+  await sleep(120);
 }
 let digital=0;
 try { digital=await migrateDigitalizace(); console.log(`\nDigitalizace: ${digital} cover entries`); } catch(e) { console.error('Digitalizace failed:',e); failed++; }
