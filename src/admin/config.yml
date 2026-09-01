@@ -1,11 +1,11 @@
 # PŘED PRVNÍM NASAZENÍM upravte tři hodnoty označené YOUR_...
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/jaroslav-holecek-web
+  repo: jaroslav-holecek/jaroslav-holecek-web
   branch: main
-  base_url: https://YOUR-SITE.pages.dev
+  base_url: https://jaroslav-holecek-web.pages.dev
   auth_endpoint: /api/auth
-  site_domain: YOUR-SITE.pages.dev
+  site_domain: jaroslav-holecek-web.pages.dev
 
 locale: cs
 media_folder: src/media
