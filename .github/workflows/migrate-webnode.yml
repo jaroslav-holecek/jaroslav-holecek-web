@@ -1,0 +1,37 @@
+name: Hromadná migrace z Webnode
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Načíst repozitář
+        uses: actions/checkout@v4
+
+      - name: Nastavit Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Připravit HTML parser
+        run: npm install --no-save cheerio@1.0.0
+
+      - name: Přenést publikace, odkazy a obálky
+        run: node scripts/migrate-webnode.mjs
+
+      - name: Uložit výsledek do repozitáře
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/books src/media
+          if git diff --cached --quiet; then
+            echo "Žádné nové změny."
+          else
+            git commit -m "Hromadná migrace obsahu z Webnode"
+            git push
+          fi
