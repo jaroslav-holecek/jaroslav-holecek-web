@@ -1,0 +1,11 @@
+NEJDŮLEŽITĚJŠÍ NASTAVENÍ PRO OSTRÉ SPUŠTĚNÍ
+
+1) GitHub: vytvořit repozitář jaroslav-holecek-web.
+2) Nahrát do něj celý obsah tohoto balíčku.
+3) Upravit src/admin/config.yml: GitHub uživatel + budoucí Cloudflare Pages adresa.
+4) Cloudflare Pages: připojit repozitář; build command npm run build; output dist.
+5) GitHub OAuth App: callback https://ADRESA-WEBU/api/callback.
+6) Cloudflare Pages: uložit GITHUB_CLIENT_ID a GITHUB_CLIENT_SECRET.
+7) Otevřít https://ADRESA-WEBU/admin/ a přihlásit se GitHubem.
+
+Při běžném přidávání knih už se GitHub ani Cloudflare ručně neřeší.

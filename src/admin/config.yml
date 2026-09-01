@@ -1,0 +1,62 @@
+# PŘED PRVNÍM NASAZENÍM upravte tři hodnoty označené YOUR_...
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/jaroslav-holecek-web
+  branch: main
+  base_url: https://YOUR-SITE.pages.dev
+  auth_endpoint: /api/auth
+  site_domain: YOUR-SITE.pages.dev
+
+locale: cs
+media_folder: src/media
+public_folder: /media
+publish_mode: simple
+
+collections:
+  - name: publications
+    label: Publikace
+    label_singular: Publikace
+    folder: src/content/books
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    summary: "{{title}} — {{category}}"
+    sortable_fields: [title, date, category]
+    view_filters:
+      - label: Astrologie
+        field: category
+        pattern: Astrologie
+      - label: Buddhismus
+        field: category
+        pattern: Buddhismus
+      - label: Hinduismus
+        field: category
+        pattern: Hinduismus
+      - label: Rámakrišna
+        field: category
+        pattern: Rámakrišna
+      - label: Taoismus
+        field: category
+        pattern: Taoismus
+      - label: Digitalizace
+        field: category
+        pattern: Digitalizace
+    fields:
+      - { label: Název, name: title, widget: string }
+      - { label: URL / slug, name: slug, widget: string, hint: "Např. prakticka-astrologie. Po zveřejnění raději neměnit." }
+      - label: Kategorie
+        name: category
+        widget: select
+        options: [Buddhismus, Hinduismus, Rámakrišna, Taoismus, Astrologie, Digitalizace]
+      - { label: Datum, name: date, widget: datetime, date_format: "DD. MM. YYYY", time_format: false, format: "YYYY-MM-DD" }
+      - { label: Autor, name: author, widget: string, required: false }
+      - { label: Počet stran, name: pages, widget: number, value_type: int, required: false }
+      - { label: Překlad / úprava / digitalizace, name: credits, widget: string, required: false }
+      - { label: Obálka, name: cover, widget: image, required: false, choose_url: true }
+      - { label: PDF na Webshare, name: pdf, widget: string, required: false }
+      - { label: EPUB na Webshare, name: epub, widget: string, required: false }
+      - { label: MOBI na Webshare, name: mobi, widget: string, required: false }
+      - { label: Krátká anotace, name: summary, widget: text, required: false }
+      - { label: Anotace / popis, name: body, widget: markdown, required: false }
