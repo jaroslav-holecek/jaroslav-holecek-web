@@ -19,6 +19,16 @@ const buddhistLinks = [
   `${BASE}/l/vyklad-karmy-karmavibhanga/`,
   `${BASE}/l/zasvecenci-a-zasvecovani-v-tibetu/`,
   `${BASE}/l/tajna-ustni-uceni-v-tibetskych-buddhistickych-sektach/`,
+  `${BASE}/l/disciplina-neboli-moralka/`,
+  `${BASE}/l/buddhismus-v-cislech/`,
+  `${BASE}/l/dzhany/`,
+  `${BASE}/l/drahocenny-sperk-osvobozeni/`,
+  `${BASE}/l/buddhisticka-pokladnice/`,
+  `${BASE}/l/vyberova-encyklopedie-buddhismu-3-0/`,
+  `${BASE}/l/strucne-vysvetleni-meditacnich-metod/`,
+  `${BASE}/l/dlouhe-buddhisticke-texty-digha-nikaja/`,
+  `${BASE}/l/vyberova-encyklopedie-buddhismu-4-0/`,
+  `${BASE}/l/buddhismus-v-cislech-ii/`,
 ];
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const clean = s => String(s || '').replace(/\u00a0/g, ' ').replace(/[ \t]+/g, ' ').replace(/\n\s*\n+/g, '\n\n').trim();
@@ -228,7 +238,9 @@ for (const [category, section] of sections) {
   }
 }
 console.log('\n== Buddhismus ==');
-for (const url of buddhistLinks) {
+let buddhistOK = 0, buddhistSkipped = 0;
+
+for (const url of [...new Set(buddhistLinks)]) {
   try {
     const b = await detail(url, 'Buddhismus');
     await fs.writeFile(
@@ -237,12 +249,20 @@ for (const url of buddhistLinks) {
     );
     console.log('OK', b.title);
     migrated++;
+    buddhistOK++;
   } catch (e) {
-    console.error('FAIL', url, e.message);
-    failed++;
+    if (/404 Not Found/i.test(e.message)) {
+      console.warn('SKIP (nenalezeno)', url);
+      buddhistSkipped++;
+    } else {
+      console.error('FAIL', url, e.message);
+      failed++;
+    }
   }
   await sleep(120);
 }
+
+console.log(`Buddhismus: ${buddhistOK} přeneseno, ${buddhistSkipped} nenalezených kandidátů`);
 let digital=0;
 try { digital=await migrateDigitalizace(); console.log(`\nDigitalizace: ${digital} cover entries`); } catch(e) { console.error('Digitalizace failed:',e); failed++; }
 console.log(`\nDONE: ${migrated} publications + ${digital} digitalization entries; ${failed} failures.`);
