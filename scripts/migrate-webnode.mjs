@@ -8,7 +8,7 @@ const MEDIA_DIR = path.join(ROOT, 'src', 'media');
 const BASE = 'https://jaroslav-holecek.webnode.cz';
 
 const sections = [
-  ['Buddhismus', '/buddhismus/'],
+  
   ['Hinduismus', '/hinduismus/'],
   ['Taoismus', '/taoismus/'],
   ['Astrologie', '/astrologie/'],
