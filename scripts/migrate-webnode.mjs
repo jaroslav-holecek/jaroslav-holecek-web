@@ -113,7 +113,12 @@ async function detail(url, category) {
   });
   const skip = new RegExp(`^(${title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}|\\d{1,2}\\.\\d{1,2}\\.\\d{4}|Jaroslav Holeček|Více|Menu|Obrázky poskytl.*|Vytvořeno službou.*|Volně ke stažení.*)$`,'i');
   const useful = lines.filter(x => !skip.test(x) && !/^PDF$|^EPUB$|^MOBI$/i.test(x));
-  const narrative = useful.filter(x => x.length > 80 && x !== credits);
+ const webnodeJunk = /cookies|preference ohledně cookies|používáme cookies|vytvořeno službou|obrázky poskytl|webnode/i;
+const narrative = useful.filter(x =>
+  x.length > 80 &&
+  x !== credits &&
+  !webnodeJunk.test(x)
+);
   const summary = narrative[0] || useful.find(x=>x.length>35 && x!==credits) || '';
   const body = narrative.slice(summary ? 1 : 0).join('\n\n');
   const old = await existing(slug);
