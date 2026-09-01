@@ -139,8 +139,8 @@ const narrative = useful.filter(x =>
     pdf: links.pdf || old.pdf || '',
     epub: links.epub || old.epub || '',
     mobi: links.mobi || old.mobi || '',
-    summary: summary || old.summary || '',
-    body: body || old.body || '',
+    summary: summary || (webnodeJunk.test(old.summary || '') ? '' : old.summary) || '',
+    body: body || (webnodeJunk.test(old.body || '') ? '' : old.body) || '',
     source_url: url
   };
 }
