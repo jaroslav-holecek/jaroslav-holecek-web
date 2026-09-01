@@ -26,15 +26,14 @@ async function get(url, binary=false) {
   return binary ? Buffer.from(await r.arrayBuffer()) : await r.text();
 }
 
-function textLines($root) {
+function textLines($) {
   const lines = [];
-  $root.find('p,h1,h2,h3,li').each((_, el) => {
-    const t = clean($root(el).text());
+  $('p,h1,h2,h3,li').each((_, el) => {
+    const t = clean($(el).text());
     if (t) lines.push(t);
   });
   return [...new Set(lines)];
 }
-
 function parseDate(text) {
   const m = text.match(/\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b/);
   return m ? `${m[3]}-${m[2].padStart(2,'0')}-${m[1].padStart(2,'0')}` : '';
