@@ -60,3 +60,14 @@ collections:
       - { label: MOBI na Webshare, name: mobi, widget: string, required: false }
       - { label: Krátká anotace, name: summary, widget: text, required: false }
       - { label: Anotace / popis, name: body, widget: markdown, required: false }
+  - name: pages
+    label: Stránky
+    files:
+      - name: informace
+        label: Informace
+        file: src/content/pages/informace.json
+        format: json
+        fields:
+          - { label: Nadpis, name: title, widget: string }
+          - { label: Úvodní text, name: intro, widget: text }
+          - { label: Hlavní text, name: body, widget: markdown }
