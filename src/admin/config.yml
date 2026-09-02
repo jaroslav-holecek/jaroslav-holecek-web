@@ -40,16 +40,16 @@ collections:
       - label: Taoismus
         field: category
         pattern: Taoismus
-      - label: Digitalizace
+      - label: Ostatní
         field: category
-        pattern: Digitalizace
+        pattern: Ostatní
     fields:
       - { label: Název, name: title, widget: string }
       - { label: URL / slug, name: slug, widget: string, hint: "Např. prakticka-astrologie. Po zveřejnění raději neměnit." }
       - label: Kategorie
         name: category
         widget: select
-        options: [Buddhismus, Hinduismus, Rámakrišna, Taoismus, Astrologie, Digitalizace]
+        options: [Buddhismus, Hinduismus, Rámakrišna, Taoismus, Astrologie, Ostatní]
       - { label: Datum, name: date, widget: datetime, date_format: "DD. MM. YYYY", time_format: false, format: "YYYY-MM-DD" }
       - { label: Autor, name: author, widget: string, required: false }
       - { label: Počet stran, name: pages, widget: number, value_type: int, required: false }
