@@ -1,15 +1,15 @@
 {
-  "title": "Astrolexikon jako e-kniha I. část",
-  "slug": "astrolexikon-jako-kniha-i-cast",
-  "category": "Astrologie",
-  "date": "2025-02-04",
-  "author": "Jaroslav Holeček",
+  "body": "",
   "pages": 529,
-  "credits": "",
-  "cover": "https://320ff54b00.cbaul-cdnwnd.com/d982696676414f40ee58730ad3280c69/200000304-0c7ae0c7af/cover-528.jpeg?ph=320ff54b00",
-  "pdf": "",
-  "epub": "",
-  "mobi": "",
   "summary": "První část Astrolexikonu v podobě elektronické knihy.",
-  "body": "Ukázkový záznam pro ostrou strukturu webu. Při migraci sem převedeme původní anotaci a odkazy na Webshare."
+  "mobi": "",
+  "author": "Jaroslav Holeček",
+  "slug": "astrolexikon-jako-kniha-i-cast",
+  "date": "2025-02-04",
+  "pdf": "https://webshare.cz/#/file/NmNK7i043x/astrolexikon-i-cast-jaroslav-holecek-pdf",
+  "cover": "https://320ff54b00.cbaul-cdnwnd.com/d982696676414f40ee58730ad3280c69/200000304-0c7ae0c7af/cover-528.jpeg?ph=320ff54b00",
+  "epub": "https://webshare.cz/#/file/wQ0vGFnxao/astrolexikon-i-cast-jaroslav-holecek-epub",
+  "title": "Astrolexikon jako e-kniha I. část",
+  "credits": "",
+  "category": "Astrologie"
 }
