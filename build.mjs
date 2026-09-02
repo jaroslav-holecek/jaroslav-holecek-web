@@ -12,7 +12,7 @@ function build(){fs.rmSync(OUT,{recursive:true,force:true});fs.mkdirSync(OUT,{re
  const infoFile=path.join(SRC,'content','pages','informace.json');
  if(fs.existsSync(infoFile)){
    const info=JSON.parse(fs.readFileSync(infoFile,'utf8'));
-   const infoBody=`<div class="wrap"><div class="page-head"><div class="crumbs"><a href="/">Úvod</a> › Informace</div><h2>${esc(info.title||'Informace')}</h2></div><section><div class="annotation">${info.intro?`<p><strong>${esc(info.intro)}</strong></p>`:''}${md(info.body)}</div></section></div>`;
+   const infoBody=`<div class="wrap"><div class="page-head"><div class="crumbs"><a href="/">Úvod</a> › Informace</div><h2>${esc(info.title||'Informace')}</h2></div><section><div class="info-profile">${info.photo?`<div class="info-photo"><img src="${esc(info.photo)}" alt="Jaroslav Holeček"></div>`:''}<div class="annotation">${info.intro?`<p><strong>${esc(info.intro)}</strong></p>`:''}${md(info.body)}</div></div></section></div>`;
    write('informace/index.html',layout(info.title||'Informace',infoBody));
  }
                  const dir=path.join(SRC,'content','books');const books=fs.readdirSync(dir).filter(x=>x.endsWith('.json')).map(x=>JSON.parse(fs.readFileSync(path.join(dir,x),'utf8'))).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
