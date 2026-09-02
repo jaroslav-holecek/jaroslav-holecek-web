@@ -1,16 +1,16 @@
 {
-  "title": "Bhagavadgíta",
-  "slug": "bhagavadgita",
-  "category": "Hinduismus",
-  "date": "2025-01-27",
-  "author": "",
+  "body": "V okamžiku morální krize nabízí Kršna učení o povinnosti, odvaze, neulpívání a cestě k vnitřní svobodě. Text spojuje filozofii, etiku i meditativní praxi a patří k nejvlivnějším dílům světové duchovní literatury. Je čten jako průvodce k jasnějšímu životu i hlubšímu sebepoznání.",
   "pages": 173,
-  "credits": "173 stran. Překlad Karel Weinfurter. Revitalizace textu a digitalizace: Jaroslav Holeček.",
-  "cover": "/media/bhagavadgita.jpg",
-  "pdf": "",
-  "epub": "https://webshare.cz/#/file/Qsii6TioKc/bhagavadgita-vjasa-karel-weinfurter-jaroslav-holecek-epub",
+  "summary": "Bhagavadgíta je nadčasový duchovní dialog mezi Kršnou a válečníkem Ardžunou, zasazený do rámce indického eposu Mahábhárata.",
   "mobi": "",
-  "summary": "Zde můžete upravit své preference ohledně cookies. Následující kategorie můžete povolit či zakázat a svůj výběr uložit.",
-  "body": "",
-  "source_url": "https://jaroslav-holecek.webnode.cz/l/bhagavadgita/"
+  "author": "Vjása",
+  "slug": "bhagavadgita",
+  "source_url": "https://jaroslav-holecek.webnode.cz/l/bhagavadgita/",
+  "date": "2025-01-27",
+  "pdf": "",
+  "cover": "/media/bhagavadgita.jpg",
+  "epub": "https://webshare.cz/#/file/Qsii6TioKc/bhagavadgita-vjasa-karel-weinfurter-jaroslav-holecek-epub",
+  "title": "Bhagavadgíta",
+  "credits": "Překlad Karel Weinfurter. Revitalizace textu a digitalizace: Jaroslav Holeček.",
+  "category": "Hinduismus"
 }
