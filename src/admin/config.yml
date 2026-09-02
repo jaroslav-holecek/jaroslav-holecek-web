@@ -69,5 +69,6 @@ collections:
         format: json
         fields:
           - { label: Nadpis, name: title, widget: string }
+          - { label: Fotografie, name: photo, widget: image, required: false, choose_url: true }
           - { label: Úvodní text, name: intro, widget: text }
           - { label: Hlavní text, name: body, widget: markdown }
