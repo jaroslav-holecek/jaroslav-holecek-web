@@ -1,16 +1,16 @@
 {
-  "title": "Meditace. Mniši Rámakrišnova řádu.",
-  "slug": "meditace-mnisi-ramakrisnova-radu",
-  "category": "Hinduismus",
-  "date": "2026-02-28",
-  "author": "Z angličtiny přeložil",
+  "body": "Původně byla napsaná pro studenty na západě, kteří neznají sanskrt. Tato sbírka textů od starších mnichů Rámakrišnova řádu se vyhýbá většině technických termínů obvykle se vyskytujících v jógických a védických dílech. Bude tedy považována za mimořádně čitelnou pro všechny. Mnoho užitečných pokynů je zde podáno jasným jazykem o technikách zklidnění neklidu mysli a soustředění na realitu v nitru. ",
   "pages": 145,
-  "credits": "Z angličtiny přeložil: Jaroslav Holeček (2025). V pdf 145 stran.",
-  "cover": "/media/meditace-mnisi-ramakrisnova-radu.png",
-  "pdf": "https://webshare.cz/#/file/tBMqr4BKSD/meditace-mnisi-ramakrisnova-radu-pdf",
-  "epub": "https://webshare.cz/#/file/xOyS5tOHFq/meditace-mnisi-ramakrisnova-radu-epub",
-  "mobi": "",
   "summary": "V tomto svazku starší mniši řádu Rámakrišna diskutují o metodách meditace, jak je uvádějí Upanišady. Jak nám ukazují, meditace není tak jednoduchá, jak naznačují někteří východní učitelé, ani tak obtížná, jak si někdy myslí lidé ze Západu.",
-  "body": "",
-  "source_url": "https://jaroslav-holecek.webnode.cz/l/meditace-mnisi-ramakrisnova-radu/"
+  "mobi": "",
+  "author": "Mniši Rámakrišnova řádu",
+  "slug": "meditace-mnisi-ramakrisnova-radu",
+  "source_url": "https://jaroslav-holecek.webnode.cz/l/meditace-mnisi-ramakrisnova-radu/",
+  "date": "2026-02-28",
+  "pdf": "https://webshare.cz/#/file/tBMqr4BKSD/meditace-mnisi-ramakrisnova-radu-pdf",
+  "cover": "/media/meditace-mnisi-ramakrisnova-radu.png",
+  "epub": "https://webshare.cz/#/file/xOyS5tOHFq/meditace-mnisi-ramakrisnova-radu-epub",
+  "title": "Meditace. Mniši Rámakrišnova řádu.",
+  "credits": "Z angličtiny přeložil: Jaroslav Holeček (2025). ",
+  "category": "Hinduismus"
 }
