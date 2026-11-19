@@ -10,6 +10,7 @@ function layout(title,body){return `<!doctype html><html lang="cs"><head><meta c
 function card(b){return `<article class="card"><a class="cover" href="/l/${esc(b.slug)}/">${b.cover?`<img loading="lazy" src="${esc(b.cover)}" alt="Obálka: ${esc(b.title)}">`:''}</a><div class="card-body"><h3>${esc(b.title)}</h3><div class="meta">${fmtDate(b.date)}${b.pages?` · ${esc(b.pages)} stran`:''}</div>${b.author?`<div class="meta">${esc(b.author)}</div>`:''}<a class="more" href="/l/${esc(b.slug)}/">Více informací →</a></div></article>`}
 function write(rel,html){const f=path.join(OUT,rel);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,html)}
 function build(){fs.rmSync(OUT,{recursive:true,force:true});fs.mkdirSync(OUT,{recursive:true});copy(path.join(SRC,'assets'),path.join(OUT,'assets'));copy(path.join(SRC,'admin'),path.join(OUT,'admin'));if(fs.existsSync(path.join(SRC,'media')))copy(path.join(SRC,'media'),path.join(OUT,'media'));
+ if(fs.existsSync(path.join(ROOT,'sitemap.xml')))copy(path.join(ROOT,'sitemap.xml'),path.join(OUT,'sitemap.xml'));
  const infoFile=path.join(SRC,'content','pages','informace.json');
  if(fs.existsSync(infoFile)){
    const info=JSON.parse(fs.readFileSync(infoFile,'utf8'));
