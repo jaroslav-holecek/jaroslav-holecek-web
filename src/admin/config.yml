@@ -57,7 +57,7 @@ collections:
       - { label: Obálka, name: cover, widget: image, required: false, choose_url: true }
       - { label: PDF na Webshare, name: pdf, widget: string, required: false }
       - { label: EPUB na Webshare, name: epub, widget: string, required: false }
-      - { label: MOBI na Webshare, name: mobi, widget: string, required: false }
+      - { label: Odkaz na prodej, name: sale, widget: string, required: false }
       - { label: Krátká anotace, name: summary, widget: text, required: false }
       - { label: Anotace / popis, name: body, widget: markdown, required: false }
   - name: pages
